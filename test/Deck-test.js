@@ -2,14 +2,14 @@ const expect = require('chai').expect;
 const Deck = require('../src/Deck');
 const Card = require('../src/Card');
 
-describe('Deck', function() {
+describe('Deck', () => {
 
-  it.skip('should be a function', function() {
+  it.skip('should be a function', () => {
     const deck = new Deck();
     expect(Deck).to.be.a('function');
   });
 
-  it.skip('should be an instance of Deck', function() {
+  it.skip('should be an instance of Deck', () => {
     const deck = new Deck();
     expect(deck).to.be.an.instanceof(Deck);
   });
@@ -27,6 +27,6 @@ describe('Deck', function() {
     const card2 = new Card(1, 'What allows you to define a set of related information using indecies?', ['object', 'array', 'function'], 'array');
     const card3 = new Card(1, 'What allows you to use a block of code multiple times?', ['object', 'array', 'function'], 'function');
     const deck = new Deck([card1, card2, card3]);
-    expect(deck.countCards).to.be.equal(3)
+    expect(deck.countCards).to.be.equal(3);
   })
 });
