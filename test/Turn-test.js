@@ -23,6 +23,18 @@ describe('Turn', function() {
   it.skip('should store current card', function() {
     const card = new Card();
     const turn = new Turn('opera', card);
-    expect(turn.card).to.deep.equal(card)
+    expect(turn.card).to.deep.equal(card);
   });
+
+  it.skip('should be able return the user\'s guess', function() {
+    const card = new Card();
+    const turn = new Turn('opera', card);
+    expect(turn.returnGuess()).to.equal('opera');
+  });
+
+  it.skip('should be able return the card', function() {
+    const card = new Card();
+    const turn = new Turn('opera', card);
+    expect(turn.returnCard()).to.equal(card);
+  })
 });
