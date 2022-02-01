@@ -38,7 +38,7 @@ describe('Turn', function() {
     expect(turn.evaluateGuess()).to.equal(false);
   });
 
-  it.skip('should be able to say if guess is correct or not', function() {
+  it('should be able to say if guess is correct or not', function() {
     const card = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
     const turn1 = new Turn('function', card);
     expect(turn1.giveFeedback()).to.equal('incorrect!');
