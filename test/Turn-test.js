@@ -1,5 +1,5 @@
 const expect = require('chai').expect;
-
+const Card = require('../src/Card');
 const Turn = require('../src/Turn');
 
 describe('Turn', function() {
@@ -13,4 +13,12 @@ describe('Turn', function() {
     const turn = new Turn();
     expect(turn).to.be.an.instanceof(Turn);
   });
+
+  it.skip('should store user\'s guess to the question', function() {
+    const card = new Card();
+    const turn = new Turn('opera', card);
+    expect(turn.guess).to.equal('opera');
+  });
+
+
 });
