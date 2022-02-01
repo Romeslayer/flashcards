@@ -20,7 +20,7 @@ describe('Turn', function() {
     expect(turn.returnGuess()).to.equal('opera');
   });
 
-  it.skip('should be able return the card', function() {
+  it('should be able return the card', function() {
     const card = new Card();
     const turn = new Turn('opera', card);
     expect(turn.returnCard()).to.equal(card);
