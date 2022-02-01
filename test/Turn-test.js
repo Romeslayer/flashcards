@@ -20,5 +20,9 @@ describe('Turn', function() {
     expect(turn.guess).to.equal('opera');
   });
 
-
+  it.skip('should store current card', function() {
+    const card = new Card();
+    const turn = new Turn('opera', card);
+    expect(turn.card).to.deep.equal(card)
+  });
 });
