@@ -14,4 +14,10 @@ describe('Round', () => {
     const round = new Round();
     expect(round).to.be.an.instanceof(Round);
   });
+
+  it.skip('should be able to store guesses', () => {
+    const round = new Round('opal');
+    expect(round.guess).to.be.equal('opal');
+  });
+  
 });
