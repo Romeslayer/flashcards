@@ -14,18 +14,6 @@ describe('Turn', function() {
     expect(turn).to.be.an.instanceof(Turn);
   });
 
-  it.skip('should store user\'s guess to the question', function() {
-    const card = new Card();
-    const turn = new Turn('opera', card);
-    expect(turn.guess).to.equal('opera');
-  });
-
-  it.skip('should store current card', function() {
-    const card = new Card();
-    const turn = new Turn('opera', card);
-    expect(turn.card).to.deep.equal(card);
-  });
-
   it.skip('should be able return the user\'s guess', function() {
     const card = new Card();
     const turn = new Turn('opera', card);
@@ -39,15 +27,22 @@ describe('Turn', function() {
   });
 
   it.skip('should be able to check if user\'s guess is correct', function() {
-    const card = new Card(1, 'What allows you to define a set of relate information using key-value pairs?', ['object', 'array', 'function'], 'object');
+    const card = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
     const turn = new Turn('object', card);
     expect(turn.evaluateGuess()).to.equal(true);
   });
 
   it.skip('should be able to check if user\'s guess is incorrect', function() {
-    const card = new Card(1, 'What allows you to define a set of relate information using key-value pairs?', ['object', 'array', 'function'], 'object');
+    const card = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
     const turn = new Turn('function', card)
     expect(turn.evaluateGuess()).to.equal(false);
   });
-  
+
+  it.skip('should be able to say if guess is correct or not', function() {
+    const card = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
+    const turn1 = new Turn('function', card);
+    expect(turn1.giveFeedback()).to.equal('incorrect!');
+    const turn2 = new Turn('object', card);
+    expect(turn2.giveFeedback()).to.equal('correct!');
+  });
 });
