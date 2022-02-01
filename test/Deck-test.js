@@ -4,7 +4,7 @@ const Card = require('../src/Card');
 
 describe('Deck', () => {
 
-  it.skip('should be a function', () => {
+  it('should be a function', () => {
     const deck = new Deck();
     expect(Deck).to.be.a('function');
   });
@@ -27,6 +27,6 @@ describe('Deck', () => {
     const card2 = new Card(1, 'What allows you to define a set of related information using indecies?', ['object', 'array', 'function'], 'array');
     const card3 = new Card(1, 'What allows you to use a block of code multiple times?', ['object', 'array', 'function'], 'function');
     const deck = new Deck([card1, card2, card3]);
-    expect(deck.countCards).to.be.equal(3);
+    expect(deck.countCards()).to.be.equal(3);
   })
 });
