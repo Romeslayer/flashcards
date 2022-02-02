@@ -41,4 +41,27 @@ describe('Round', () => {
   it.skip('should be able to store incorrect guesses', () => {
       expect(round.incorrectGuesses).to.equal([]);
   });
+
+  describe('When a guess is made', () => {
+
+    it.skip('a new Turn is created', () => {
+
+    });
+
+    it.skip('turns count is updated', () => {
+
+    });
+
+    it.skip('updates the current card', () => {
+
+    });
+
+    it.skip('guess is evaluated', () => {
+
+    });
+
+    it.skip('feedback is given', () => {
+
+    });
+  });
 });
