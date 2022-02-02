@@ -39,4 +39,24 @@ describe('Round', () => {
     const round = new Round('object', deck);
     expect(round.returnCurrentCard()).to.deep.equal(deck.cards[0]);
   });
+
+  it.skip('should have a turn count thats 0 by default', () => {
+    const card1 = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
+    const card2 = new Card(2, 'What allows you to define a set of related information using indecies?', ['object', 'array', 'function'], 'array');
+    const card3 = new Card(3, 'What allows you to use a block of code multiple times?', ['object', 'array', 'function'], 'function');
+    const cards = [card1, card2, card3];
+    const deck = new Deck(cards);
+    const round = new Round('object', deck);
+    expect(round.turns).to.equal(0);
+  });
+
+  it.skip('should be able to store incorrect guesses', () => {
+      const card1 = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
+      const card2 = new Card(2, 'What allows you to define a set of related information using indecies?', ['object', 'array', 'function'], 'array');
+      const card3 = new Card(3, 'What allows you to use a block of code multiple times?', ['object', 'array', 'function'], 'function');
+      const cards = [card1, card2, card3];
+      const deck = new Deck(cards);
+      const round = new Round('object', deck);
+      expect(round.incorrectGuesses).to.equal([]);
+  });
 });
