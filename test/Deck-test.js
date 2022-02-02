@@ -29,6 +29,6 @@ describe('Deck', () => {
     const card3 = new Card(3, 'What allows you to use a block of code multiple times?', ['object', 'array', 'function'], 'function');
     const cards = [card1, card2, card3];
     const deck = new Deck(cards);
-    expect(deck.countCards()).to.be.equal(deck.length);
+    expect(deck.countCards()).to.be.equal(deck.cards.length);
   })
 });
