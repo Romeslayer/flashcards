@@ -36,15 +36,13 @@ describe('Round', () => {
     expect(round.returnCurrentCard()).to.deep.equal(round.deck.cards[0]);
   });
 
-
-
   it('should be able to store incorrect guesses', () => {
     expect(round.incorrectGuesses).to.deep.equal([]);
   });
 
   describe('When a guess is made', () => {
 
-    it.skip('guess is evaluated using Turns as correct', () => {
+    it('guess is evaluated using Turns as correct', () => {
       let testRound = round;
       let result = testRound.takeTurn('object');
       expect(result).to.be.deep.equal('correct!');
