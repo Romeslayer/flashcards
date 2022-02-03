@@ -85,12 +85,6 @@ describe('Round', () => {
     });
 
     it('should be able to end the round', () => {
-      const card1 = new Card(data[0]);
-      const card2 = new Card(data[1]);
-      const card3 = new Card(data[2]);
-      const cards = [card1, card2, card3];
-      const deck = new Deck(cards);
-      const round = new Round(deck);
       round.takeTurn(card1.correctAnswer);
       round.takeTurn(card2.correctAnswer);
       round.takeTurn(card3.correctAnswer);
@@ -98,12 +92,6 @@ describe('Round', () => {
     });
 
     it('should be able to end a different round', () => {
-      const card1 = new Card(data[0]);
-      const card2 = new Card(data[1]);
-      const card3 = new Card(data[2]);
-      const cards = [card1, card2, card3];
-      const deck = new Deck(cards);
-      const round = new Round(deck);
       round.takeTurn(card1.correctAnswer);
       round.takeTurn('object');
       round.takeTurn(card3.correctAnswer);
