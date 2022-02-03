@@ -24,17 +24,19 @@ describe('Round', () => {
     expect(round.guess).to.be.equal('object');
   });
 
-  it.skip('should also store a Deck', () => {
+  it('should also store a Deck', () => {
     expect(round.deck).to.be.equal(deck);
   });
-
-  it.skip('should be able to return the current card being played', () => {
-    expect(round.returnCurrentCard()).to.deep.equal(round.deck.cards[0]);
-  });
-
+  
   it.skip('should have a turn count thats 0 by default', () => {
     expect(round.turns).to.equal(0);
   });
+
+  it('should be able to return the current card being played', () => {
+    expect(round.returnCurrentCard()).to.deep.equal(round.deck.cards[0]);
+  });
+
+
 
   it.skip('should be able to store incorrect guesses', () => {
     expect(round.incorrectGuesses).to.equal([]);
