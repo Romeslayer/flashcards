@@ -20,12 +20,14 @@ describe('Game', () => {
 
     it.skip('creates Cards and puts them in a Deck', () => {
       const game = new Game(data);
+      game.start();
       expect(game.deck).to.be.an.instanceof(Deck);
       expect(game.deck.cards[0]).to.be.an.instanceof(Card);
     });
 
     it.skip('creates Cards from data', () => {
       const game = new Game(data);
+      game.start();
       const testCard = new Card(data[0]);
       expect(game.deck.cards[0]).to.be.deep.equal(testCard);
       expect(game.deck.cards.length).to.be.equal(testCard);
@@ -34,11 +36,13 @@ describe('Game', () => {
 
   it.skip('should create an instance of the round', () => {
     const game = new Game(data);
+    game.start();
     expect(game.currentRound).to.be.an.instanceof(Round);
   });
 
   it.skip('should create the correct instance of the round', () => {
     const game = new Game(data);
+    game.start()
     const testCard = new Card(data[0]);
     const testDeck = new Deck([testCard]);
     const testRound = new Round(testDeck);
