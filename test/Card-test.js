@@ -1,5 +1,5 @@
 const expect = require('chai').expect;
-const data = require('../src/data').prototypeData
+const data = require('../src/data').prototypeData;
 
 const Card = require('../src/Card');
 
@@ -11,7 +11,7 @@ describe('Card', function() {
   });
 
   it('should be an instance of Card', function() {
-    const cardData = data[0]
+    const cardData = data[0];
     const card = new Card(cardData);
     expect(card).to.be.an.instanceof(Card);
   });
