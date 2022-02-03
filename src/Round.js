@@ -19,7 +19,7 @@ class Round {
 
   calculatePercentCorrect = () => Math.floor(((this.turns - this.incorrectGuesses.length) / this.turns) * 100);
 
-  endRound = () => `** Round over! ** You answered ${this.calculatePercentCorrect()}% of the questions correctly!`
+  endRound = () => `** Round over! ** You answered ${this.calculatePercentCorrect()}% of the questions correctly!`;
 }
 
 module.exports = Round;
