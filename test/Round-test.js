@@ -38,8 +38,8 @@ describe('Round', () => {
 
 
 
-  it.skip('should be able to store incorrect guesses', () => {
-    expect(round.incorrectGuesses).to.equal([]);
+  it('should be able to store incorrect guesses', () => {
+    expect(round.incorrectGuesses).to.deep.equal([]);
   });
 
   describe('When a guess is made', () => {
@@ -75,36 +75,36 @@ describe('Round', () => {
       testRound.takeTurn('object');
       expect(testRound.returnCurrentCard()).to.be.equal(testRound.deck.cards[1]);
     });
-  });
 
-  it.skip('should be able to calculate the percentage of correct guesses', () => {
-    let testRound = round;
-    testRound.takeTurn('object');
-    testRound.takeTurn('array');
-    testRound.takeTurn('function');
-    expect(testRound.calculatePercentCorrect()).to.equal(100);
-  });
+    it.skip('should be able to calculate the percentage of correct guesses', () => {
+      let testRound = round;
+      testRound.takeTurn('object');
+      testRound.takeTurn('array');
+      testRound.takeTurn('function');
+      expect(testRound.calculatePercentCorrect()).to.equal(100);
+    });
 
-  it.skip('should be able to calculate the percentage of other correct guesses', () => {
-    let testRound = round;
-    testRound.takeTurn('object');
-    testRound.takeTurn('object');
-    expect(testRound.calculatePercentCorrect()).to.equal(50);
-  });
+    it.skip('should be able to calculate the percentage of other correct guesses', () => {
+      let testRound = round;
+      testRound.takeTurn('object');
+      testRound.takeTurn('object');
+      expect(testRound.calculatePercentCorrect()).to.equal(50);
+    });
 
-  it.skip('should be able to end the round', () => {
-    let testRound = round;
-    testRound.takeTurn('object');
-    testRound.takeTurn('array');
-    testRound.takeTurn('function');
-    expect(testRound.endRound()).to.deep.equal('** Round over! ** You answered 100% of the questions correctly!');
-  });
+    it.skip('should be able to end the round', () => {
+      let testRound = round;
+      testRound.takeTurn('object');
+      testRound.takeTurn('array');
+      testRound.takeTurn('function');
+      expect(testRound.endRound()).to.deep.equal('** Round over! ** You answered 100% of the questions correctly!');
+    });
 
-  it.skip('should be able to end a different round', () => {
-    let testRound = round;
-    testRound.takeTurn('object');
-    testRound.takeTurn('object');
-    testRound.takeTurn('function');
-    expect(testRound.endRound()).to.deep.equal('** Round over! ** You answered 66% of the questions correctly!');
+    it.skip('should be able to end a different round', () => {
+      let testRound = round;
+      testRound.takeTurn('object');
+      testRound.takeTurn('object');
+      testRound.takeTurn('function');
+      expect(testRound.endRound()).to.deep.equal('** Round over! ** You answered 66% of the questions correctly!');
+    });
   });
 });
