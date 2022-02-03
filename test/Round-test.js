@@ -121,7 +121,7 @@ describe('Round', () => {
       expect(round.turns).to.be.deep.equal(2);
     });
 
-    it.skip('updates the current card', () => {
+    it('updates the current card', () => {
       const card1 = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
       const card2 = new Card(2, 'What allows you to define a set of related information using indecies?', ['object', 'array', 'function'], 'array');
       const card3 = new Card(3, 'What allows you to use a block of code multiple times?', ['object', 'array', 'function'], 'function');
@@ -133,7 +133,7 @@ describe('Round', () => {
       expect(round.returnCurrentCard()).to.be.equal(round.deck.cards[1]);
     });
 
-    it.skip('should be able to calculate the percentage of correct guesses', () => {
+    it('should be able to calculate the percentage of correct guesses', () => {
       const card1 = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
       const card2 = new Card(2, 'What allows you to define a set of related information using indecies?', ['object', 'array', 'function'], 'array');
       const card3 = new Card(3, 'What allows you to use a block of code multiple times?', ['object', 'array', 'function'], 'function');
@@ -147,7 +147,7 @@ describe('Round', () => {
       expect(round.calculatePercentCorrect()).to.equal(100);
     });
 
-    it.skip('should be able to calculate the percentage of other correct guesses', () => {
+    it('should be able to calculate the percentage of other correct guesses', () => {
       const card1 = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
       const card2 = new Card(2, 'What allows you to define a set of related information using indecies?', ['object', 'array', 'function'], 'array');
       const card3 = new Card(3, 'What allows you to use a block of code multiple times?', ['object', 'array', 'function'], 'function');
@@ -156,10 +156,10 @@ describe('Round', () => {
       const round = new Round('object', deck);
       round.takeTurn('object');
       round.takeTurn('object');
-      expect(testRound.calculatePercentCorrect()).to.equal(50);
+      expect(round.calculatePercentCorrect()).to.equal(50);
     });
 
-    it.skip('should be able to end the round', () => {
+    it('should be able to end the round', () => {
       const card1 = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
       const card2 = new Card(2, 'What allows you to define a set of related information using indecies?', ['object', 'array', 'function'], 'array');
       const card3 = new Card(3, 'What allows you to use a block of code multiple times?', ['object', 'array', 'function'], 'function');
@@ -172,7 +172,7 @@ describe('Round', () => {
       expect(round.endRound()).to.deep.equal('** Round over! ** You answered 100% of the questions correctly!');
     });
 
-    it.skip('should be able to end a different round', () => {
+    it('should be able to end a different round', () => {
       const card1 = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
       const card2 = new Card(2, 'What allows you to define a set of related information using indecies?', ['object', 'array', 'function'], 'array');
       const card3 = new Card(3, 'What allows you to use a block of code multiple times?', ['object', 'array', 'function'], 'function');
