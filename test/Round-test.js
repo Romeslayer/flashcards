@@ -2,6 +2,7 @@ const expect = require('chai').expect;
 const Round = require('../src/Round');
 const Card = require('../src/Card');
 const Deck = require('../src/Deck');
+const data = require('../src/data').prototypeData;
 
 describe('Round', () => {
 
